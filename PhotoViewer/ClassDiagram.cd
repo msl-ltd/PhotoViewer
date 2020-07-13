@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PhotoViewer.App" Collapsed="true">
+    <Position X="34.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAQAAAAAEAQA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Model.MainModel" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QwAAgAAAA0AAIgQAAAAACAAAAiEAAAAAAIAAAABkAAA=</HashCode>
+      <FileName>Model\MainModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.BindableBase" Collapsed="true">
+    <Position X="1.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvvm\BindableBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.InteractionRequest&lt;T&gt;" Collapsed="true">
+    <Position X="36" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvvm\InteractionRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.InteractionRequestEventArgsBase&lt;TContent, TCallbackArgs&gt;" Collapsed="true">
+    <Position X="3.5" Y="6.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Mvvm\InteractionRequestEventArgsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.MessageBoxNotification" Collapsed="true">
+    <Position X="39.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAEAAAA=</HashCode>
+      <FileName>Mvvm\MessageBoxNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.MessageBoxNotificationEventArgs" Collapsed="true">
+    <Position X="0.75" Y="8" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvvm\MessageBoxNotificationEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.OpenFileDialogNotification" Collapsed="true">
+    <Position X="36" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvvm\OpenFileDialogNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.OpenFileDialogNotificationEventArgs" Collapsed="true">
+    <Position X="6.5" Y="8" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvvm\OpenFileDialogNotificationEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Properties.Resources" Collapsed="true">
+    <Position X="37.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACGQAAAA8gIkIIAALEICGBQAACAoEAAAEEAAAAoA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.View.Behavior.EventToCommandActionBehavior" Collapsed="true">
+    <Position X="34.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAIAAAAAAAABIAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Behavior\EventToCommandActionBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.View.Behavior.MessageBoxActionBehavior" Collapsed="true">
+    <Position X="1" Y="5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Behavior\MessageBoxActionBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.View.Behavior.OpenFileDialogActionBehavior" Collapsed="true">
+    <Position X="6.75" Y="5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Behavior\OpenFileDialogActionBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.View.Behavior.TriggerActionBehaviorBase&lt;TAssociatedObject, TEventArgs&gt;" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Behavior\TriggerActionBehaviorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.View.Converter.BitmapMetadataConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Converter\BitmapMetadataConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PhotoViewer.View.Converter.BitmapMetadataOrientationConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Converter\BitmapMetadataOrientationConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PhotoViewer.View.Converter.BitmapMetadataOrientationInvertConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Converter\BitmapMetadataOrientationInvertConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PhotoViewer.View.Converter.MultiValueConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Converter\MultiValueConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PhotoViewer.View.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.AboutCommand" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\AboutCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.CommandBase&lt;T&gt;" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAADAAQAAEQAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ViewModel\Command\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.CopyCommand" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\CopyCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.DeleteCommand" Collapsed="true">
+    <Position X="28.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\DeleteCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.DropCommand" Collapsed="true">
+    <Position X="2" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\DropCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.LoadCommand" Collapsed="true">
+    <Position X="8" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\LoadCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.NextCommand" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\NextCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.OpenCommand" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\OpenCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.OpenFileWithCommand" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\OpenFileWithCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.OpenWithCommand" Collapsed="true">
+    <Position X="31.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\OpenWithCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.PreviewDragOverCommand" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\PreviewDragOverCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.Command.PreviousCommand" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Command\PreviousCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.ViewModel.MainViewModel" Collapsed="true">
+    <Position X="2.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAgAABAwAAAkAAAAAACIAAEhEAAAAAAIAAAABkAAQ=</HashCode>
+      <FileName>ViewModel\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>
