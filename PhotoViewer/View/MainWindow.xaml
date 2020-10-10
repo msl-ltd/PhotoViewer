@@ -205,23 +205,23 @@
             </StatusBarItem>
             <StatusBarItem>
                 <!--レンズ焦点距離-->
-                <TextBlock Text="{Binding Metadata, ConverterParameter=/app1/ifd/exif/\{ushort\=37386\}, Converter={StaticResource BitmapMetadataConverter}, StringFormat=\{0\}mm, TargetNullValue={x:Null}}" />
+                <TextBlock Text="{Binding Metadata, Converter={StaticResource BitmapMetadataConverter}, ConverterParameter=/app1/ifd/exif/{ushort\=37386}, StringFormat={}{0}mm, TargetNullValue={x:Null}}" />
             </StatusBarItem>
             <StatusBarItem>
                 <!--35mm換算レンズ焦点距離-->
-                <TextBlock Text="{Binding Metadata, ConverterParameter=/app1/ifd/exif/\{ushort\=41989\}, Converter={StaticResource BitmapMetadataConverter}, StringFormat=(\{0\}mm), TargetNullValue={x:Null}}" />
+                <TextBlock Text="{Binding Metadata, Converter={StaticResource BitmapMetadataConverter}, ConverterParameter=/app1/ifd/exif/{ushort\=41989}, StringFormat=({0}mm), TargetNullValue={x:Null}}" />
             </StatusBarItem>
             <StatusBarItem>
                 <!--F ナンバー-->
-                <TextBlock Text="{Binding Metadata, ConverterParameter=/app1/ifd/exif/\{ushort\=33437\}, Converter={StaticResource BitmapMetadataConverter}, StringFormat=F\{0\}, TargetNullValue={x:Null}}" />
+                <TextBlock Text="{Binding Metadata, Converter={StaticResource BitmapMetadataConverter}, ConverterParameter=/app1/ifd/exif/{ushort\=33437}, StringFormat=F{0}, TargetNullValue={x:Null}}" />
             </StatusBarItem>
             <StatusBarItem>
                 <!--露出時間-->
-                <TextBlock Text="{Binding Metadata, ConverterParameter=/app1/ifd/exif/\{ushort\=33434\}, Converter={StaticResource BitmapMetadataConverter}}" />
+                <TextBlock Text="{Binding Metadata, Converter={StaticResource BitmapMetadataConverter}, ConverterParameter=/app1/ifd/exif/{ushort\=33434}}" />
             </StatusBarItem>
             <StatusBarItem>
                 <!--撮影感度-->
-                <TextBlock Text="{Binding Metadata, ConverterParameter=/app1/ifd/exif/\{ushort\=34855\}, Converter={StaticResource BitmapMetadataConverter}, StringFormat=ISO\{0\}, TargetNullValue={x:Null}}" />
+                <TextBlock Text="{Binding Metadata, Converter={StaticResource BitmapMetadataConverter}, ConverterParameter=/app1/ifd/exif/{ushort\=34855}, StringFormat=ISO{0}, TargetNullValue={x:Null}}" />
             </StatusBarItem>
         </StatusBar>
 
