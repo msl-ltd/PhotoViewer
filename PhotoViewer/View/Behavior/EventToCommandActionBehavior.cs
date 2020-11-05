@@ -1,8 +1,8 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="EventToCommandActionBehavior.cs" company="MSL Ltd.">
-//      (C) 2018 MSL Ltd.
+//     (C) 2018 MSL Ltd.
 // </copyright>
-// <author>Miyata Tomoyuki</author>
+// <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
 using System.Windows;
 using System.Windows.Input;

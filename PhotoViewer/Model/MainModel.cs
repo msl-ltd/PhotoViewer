@@ -1,8 +1,8 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="MainModel.cs" company="MSL Ltd.">
-//      (C) 2018 MSL Ltd.
+//     (C) 2018 MSL Ltd.
 // </copyright>
-// <author>Miyata Tomoyuki</author>
+// <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
 using Microsoft.VisualBasic.FileIO;
 using PhotoViewer.Mvvm;
