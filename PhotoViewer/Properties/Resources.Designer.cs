@@ -340,7 +340,7 @@ namespace PhotoViewer.Properties {
         }
         
         /// <summary>
-        ///   http://msl.soragoto.net に類似しているローカライズされた文字列を検索します。
+        ///   https://github.com/msl-ltd/PhotoViewer/wiki に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string URL_HELP_TOPICS {
             get {
