@@ -3,7 +3,7 @@
   <Class Name="PhotoViewer.App" Collapsed="true">
     <Position X="34.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAQAAAAAEAQA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAQAAAAAEAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,7 +92,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PhotoViewer.View.Behavior.TriggerActionBehaviorBase&lt;TAssociatedObject, TEventArgs&gt;" Collapsed="true">
-    <Position X="4.25" Y="3.5" Width="4.25" />
+    <Position X="4.5" Y="3.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Behavior\TriggerActionBehaviorBase.cs</FileName>
@@ -144,14 +144,6 @@
       <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModel\Command\AboutCommand.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="PhotoViewer.ViewModel.Command.CommandBase&lt;T&gt;" Collapsed="true">
-    <Position X="16.75" Y="0.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAADAAQAAEQAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
-      <FileName>ViewModel\Command\CommandBase.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="PhotoViewer.ViewModel.Command.CopyCommand" Collapsed="true">
     <Position X="22.75" Y="1.75" Width="2.25" />
@@ -226,9 +218,17 @@
   <Class Name="PhotoViewer.ViewModel.MainViewModel" Collapsed="true">
     <Position X="2.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QgAAgAABAwAAAkAAAAAACIAAEhEAAAAAAIAAAABkAAQ=</HashCode>
+      <HashCode>QgAAgAABAwAAAkAAAAAACAAAEhEAAAAAAIAAABBkAAQ=</HashCode>
       <FileName>ViewModel\MainViewModel.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoViewer.Mvvm.CommandBase&lt;T&gt;" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAADAAQAAEQAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Mvvm\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="メイリオ" Size="9" />
 </ClassDiagram>
