@@ -226,9 +226,6 @@
         </StatusBar>
 
         <Image Source="{Binding Source}">
-            <Image.RenderTransformOrigin>
-                <Point X="0.5" />
-            </Image.RenderTransformOrigin>
             <Image.LayoutTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="{Binding Orientation, Converter={StaticResource BitmapMetadataOrientationInvertConverter}}" />
