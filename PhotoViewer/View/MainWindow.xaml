@@ -198,6 +198,10 @@
                 </TextBlock>
             </StatusBarItem>
             <StatusBarItem>
+                <!--画像方向-->
+                <TextBlock Text="{Binding Orientation}" />
+            </StatusBarItem>
+            <StatusBarItem>
                 <TextBlock Text="{Binding Metadata.Format}" />
             </StatusBarItem>
             <StatusBarItem>
