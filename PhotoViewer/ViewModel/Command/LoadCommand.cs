@@ -61,23 +61,10 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                string[] args = null;
-                MainViewModel mainViewModel = null;
+                string[] args = parameter[0] as string[];
+                MainViewModel mainViewModel = parameter[1] as MainViewModel;
 
-                if (parameter.Length > 0)
-                {
-                    args = parameter[0] as string[];
-                }
-
-                if (parameter.Length > 1)
-                {
-                    mainViewModel = parameter[1] as MainViewModel;
-                }
-
-                if (args != null && mainViewModel != null)
-                {
-                    mainViewModel.Load(args.FirstOrDefault());
-                }
+                mainViewModel.Load(args.FirstOrDefault());
             }
         }
     }

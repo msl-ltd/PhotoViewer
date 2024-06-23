@@ -33,7 +33,7 @@ namespace PhotoViewer.ViewModel.Command
         /// </param>
         protected override void Execute(string parameter)
         {
-            if (!string.IsNullOrEmpty(parameter))
+            if (parameter != null)
             {
                 using (var process = Process.Start(parameter))
                 {

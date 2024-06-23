@@ -62,25 +62,13 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                DragEventArgs dragEventArgs = null;
-                MainViewModel mainViewModel = null;
+                DragEventArgs dragEventArgs = parameter[0] as DragEventArgs;
+                MainViewModel mainViewModel = parameter[1] as MainViewModel;
 
-                if (parameter.Length > 0)
-                {
-                    dragEventArgs = parameter[0] as DragEventArgs;
-                }
 
-                if (parameter.Length > 1)
+                if (dragEventArgs.Data.GetData(DataFormats.FileDrop) is string[] files)
                 {
-                    mainViewModel = parameter[1] as MainViewModel;
-                }
-
-                if (dragEventArgs != null && mainViewModel != null)
-                {
-                    if (dragEventArgs.Data.GetData(DataFormats.FileDrop) is string[] files)
-                    {
-                        mainViewModel.Load(files.FirstOrDefault());
-                    }
+                    mainViewModel.Load(files.FirstOrDefault());
                 }
             }
         }

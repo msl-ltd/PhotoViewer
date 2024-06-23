@@ -46,7 +46,7 @@ namespace PhotoViewer.ViewModel.Command
         /// </param>
         protected override void Execute(MainViewModel parameter)
         {
-            if (parameter.IsExist)
+            if (parameter != null)
             {
                 using (var process = Process.Start(parameter.FileName))
                 {
