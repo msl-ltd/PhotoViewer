@@ -65,7 +65,6 @@ namespace PhotoViewer.ViewModel.Command
                 DragEventArgs dragEventArgs = parameter[0] as DragEventArgs;
                 MainViewModel mainViewModel = parameter[1] as MainViewModel;
 
-
                 if (dragEventArgs.Data.GetData(DataFormats.FileDrop) is string[] files)
                 {
                     mainViewModel.Load(files.FirstOrDefault());
