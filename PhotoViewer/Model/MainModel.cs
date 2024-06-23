@@ -184,9 +184,9 @@ namespace PhotoViewer.Model
         {
             var files = new List<string>();
 
-            if (!string.IsNullOrEmpty(FileName))
+            var path = Path.GetDirectoryName(FileName);
+            if (Directory.Exists(path))
             {
-                var path = Path.GetDirectoryName(FileName);
                 files.AddRange(ReadableFiles.SelectMany(arg => Directory.GetFiles(path, arg)));
                 files.Sort();
             }
