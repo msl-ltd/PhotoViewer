@@ -43,12 +43,6 @@ namespace PhotoViewer.ViewModel.Command
         /// コマンドにより使用されるデータです。
         /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
-        protected override void Execute(MainViewModel parameter)
-        {
-            if (parameter != null)
-            {
-                parameter.Copy();
-            }
-        }
+        protected override void Execute(MainViewModel parameter) => parameter?.Copy();
     }
 }
