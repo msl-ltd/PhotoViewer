@@ -46,9 +46,6 @@ namespace PhotoViewer.View.Converter
                     case 7:
                         scaleX = -1;
                         break;
-
-                    default:
-                        break;
                 }
             }
 

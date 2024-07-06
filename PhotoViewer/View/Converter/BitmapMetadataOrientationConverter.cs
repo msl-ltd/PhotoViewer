@@ -51,9 +51,6 @@ namespace PhotoViewer.View.Converter
                     case 8:
                         angle = 270;
                         break;
-
-                    default:
-                        break;
                 }
             }
 
