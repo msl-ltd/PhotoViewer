@@ -1,0 +1,1111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PhotoViewer</name>
+    </assembly>
+    <members>
+        <member name="T:PhotoViewer.Model.MainModel">
+            <summary>
+            メインモデルを定義します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.Model.MainModel._fileName">
+            <summary>
+            ファイル名を保持します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.Model.MainModel._source">
+            <summary>
+            画像を保持します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.Model.MainModel._metadata">
+            <summary>
+            メタデータを保持します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.Model.MainModel._orientation">
+            <summary>
+            回転情報を保持します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.FileVersionInfo">
+            <summary>
+            バージョン情報を取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.ReadableFiles">
+            <summary>
+            読み込み可能なファイルのパターンを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.FileName">
+            <summary>
+            ファイル名を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.Source">
+            <summary>
+            画像を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.Metadata">
+            <summary>
+             メタデータを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.Orientation">
+            <summary>
+            回転情報を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.IsExist">
+            <summary>
+            ファイルが存在するかを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Model.MainModel.IsExistOther">
+            <summary>
+            他のファイルが存在するかを取得します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.Load(System.String)">
+            <summary>
+            ファイルを読み込みます。
+            </summary>
+            <param name="fileName">ファイル名。</param>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.Previous">
+            <summary>
+            前のファイルを読み込みます。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.Next">
+            <summary>
+            次のファイルを読み込みます。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.Copy">
+            <summary>
+            ファイルをコピーします。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.Delete">
+            <summary>
+            ファイルを削除します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Model.MainModel.GetReadableFiles">
+            <summary>
+            読み込み可能なファイルの一覧を取得します。
+            </summary>
+            <returns>ファイル一覧。</returns>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.CommandBase`1">
+            <summary>
+            CommandBaseを定義します。
+            </summary>
+            <typeparam name="T">コマンドパラメーターの型。</typeparam>
+        </member>
+        <member name="F:PhotoViewer.Mvvm.CommandBase`1._isExecuting">
+            <summary>
+            コマンドが実行中かを保持します。
+            </summary>
+        </member>
+        <member name="E:PhotoViewer.Mvvm.CommandBase`1.CanExecuteChanged">
+            <summary>
+            コマンドを実行するかどうかに影響するような変更があった場合に発生します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.CommandBase`1.System#Windows#Input#ICommand#CanExecute(System.Object)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.CommandBase`1.System#Windows#Input#ICommand#Execute(System.Object)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.CommandBase`1.CanExecute(`0)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.CommandBase`1.Execute(`0)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.InteractionRequest`1">
+            <summary>
+            通知を定義します。
+            </summary>
+            <typeparam name="T">通知イベント用のイベント引数の型。</typeparam>
+        </member>
+        <member name="E:PhotoViewer.Mvvm.InteractionRequest`1.Notified">
+            <summary>
+            通知したときに発生します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.InteractionRequest`1.Raise(`0)">
+            <summary>
+            通知イベントを発生します。
+            </summary>
+            <param name="notificationEventArgs">通知の内容。</param>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.InteractionRequestEventArgsBase`2">
+            <summary>
+            通知イベント用のイベント引数を定義します。
+            </summary>
+            <typeparam name="TContent">通知内容の型。</typeparam>
+            <typeparam name="TCallbackArgs">通知結果コールバックのパラメーターの型。</typeparam>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.InteractionRequestEventArgsBase`2.Content">
+            <summary>
+            通知内容を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.InteractionRequestEventArgsBase`2.Callback">
+            <summary>
+            結果通知コールバックを取得または設定します。
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.OpenFileDialogNotificationEventArgs">
+            <summary>
+            ファイルを開くダイアログボックス表示の通知用イベント引数を定義します。
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.MessageBoxNotificationEventArgs">
+            <summary>
+            メッセージボックス表示の通知用イベント引数を定義します。
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.OpenFileDialogNotification">
+            <summary>
+            ファイルを開くダイアログボックス表示の通知内容を定義します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.OpenFileDialogNotification.Filter">
+            <summary>
+            ファイルの種類を決定するフィルター文字列を取得または設定します。
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.MessageBoxNotification">
+            <summary>
+            メッセージボックス表示の通知内容を定義します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.MessageBoxNotification.Text">
+            <summary>
+            表示するテキストを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.MessageBoxNotification.Caption">
+            <summary>
+            表示するタイトル バーのキャプションを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.MessageBoxNotification.Button">
+            <summary>
+            表示するボタンを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Mvvm.MessageBoxNotification.Icon">
+            <summary>
+            表示するアイコンを取得または設定します。
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Mvvm.BindableBase">
+            <summary>
+            BindableBaseを定義します。
+            </summary>
+        </member>
+        <member name="E:PhotoViewer.Mvvm.BindableBase.PropertyChanged">
+            <summary>
+            プロパティ値が変更するときに発生します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.BindableBase.RaisePropertyChanged(System.String)">
+            <summary>
+            プロパティ変更イベントを発生します。
+            </summary>
+            <param name="propertyName">変更したプロパティ名。</param>
+        </member>
+        <member name="M:PhotoViewer.Mvvm.BindableBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            プロパティを変更します。
+            </summary>
+            <typeparam name="T">変更するプロパティの型。</typeparam>
+            <param name="field">変更するプロパティ。</param>
+            <param name="value">変更する値。</param>
+            <param name="propertyName">変更するプロパティ名。</param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.LoadCommand">
+            <summary>
+            ロードコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.LoadCommand.CanExecute(System.Object[])">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.LoadCommand.Execute(System.Object[])">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.OpenWithCommand">
+            <summary>
+            プログラムから開くコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenWithCommand.CanExecute(System.String)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenWithCommand.Execute(System.String)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.OpenFileWithCommand">
+            <summary>
+            ファイルをプログラムから開くコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenFileWithCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenFileWithCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.AboutCommand">
+            <summary>
+            アプリケーションについてコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.AboutCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.AboutCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.CopyCommand">
+            <summary>
+            コピーコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.CopyCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.CopyCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.DeleteCommand">
+            <summary>
+            削除コマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.DeleteCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.DeleteCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.DropCommand">
+            <summary>
+            ドロップコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.DropCommand.CanExecute(System.Object[])">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.DropCommand.Execute(System.Object[])">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.NextCommand">
+            <summary>
+            次へコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.NextCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.NextCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.OpenCommand">
+            <summary>
+            オープンコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.OpenCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.PreviewDragOverCommand">
+            <summary>
+            ドラッグコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.PreviewDragOverCommand.CanExecute(System.Windows.DragEventArgs)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.PreviewDragOverCommand.Execute(System.Windows.DragEventArgs)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.Command.PreviousCommand">
+            <summary>
+            前へコマンドを定義します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.PreviousCommand.CanExecute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            現在の状態でコマンドが実行可能かどうかを決定するメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+            <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.Command.PreviousCommand.Execute(PhotoViewer.ViewModel.MainViewModel)">
+            <summary>
+            コマンドが起動される際に呼び出すメソッドを定義します。
+            </summary>
+            <param name="parameter">
+            コマンドにより使用されるデータです。
+            コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.ViewModel.MainViewModel">
+            <summary>
+            メインビューモデルを定義します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.ViewModel.MainViewModel._mainModel">
+            <summary>
+            モデルを保持します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.#ctor">
+            <summary>
+            PhotoViewer.ViewModel.MainViewModel クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Finalize">
+            <summary>
+            PhotoViewer.ViewModel.MainViewModel クラスの新しいインスタンスを解放します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.FileVersionInfo">
+            <summary>
+            バージョン情報を取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.ReadableFiles">
+            <summary>
+            読み込み可能なファイルのパターンを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.FileName">
+            <summary>
+            ファイル名を取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.Source">
+            <summary>
+            画像を取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.Metadata">
+            <summary>
+             画像のメタデータを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.Orientation">
+            <summary>
+            回転情報を取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.IsExist">
+            <summary>
+            ファイルが存在するかを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.IsExistOther">
+            <summary>
+            他のファイルが存在するかを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.Title">
+            <summary>
+            タイトルを取得します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.OpenFileDialogRequest">
+            <summary>
+            ファイルを開くダイアログボックス表示リクエストを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.MessageBoxRequest">
+            <summary>
+            メッセージボックス表示リクエストを取得または設定します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Load(System.String)">
+            <summary>
+            ファイルを読み込みます。
+            </summary>
+            <param name="fileName">ファイル名。</param>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Previous">
+            <summary>
+            前のファイルを読み込みます。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Next">
+            <summary>
+            次のファイルを読み込みます。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Copy">
+            <summary>
+            ファイルをコピーします。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.Delete">
+            <summary>
+            ファイルを削除します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.MainModel_PropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            メインモデルのプロパティの変更を通知します。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="M:PhotoViewer.ViewModel.MainViewModel.MainViewModel_PropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            メインビューモデルのプロパティの変更を通知します。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="T:PhotoViewer.App">
+            <summary>
+            App.xaml の相互作用ロジック
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.App.Args">
+            <summary>
+            コマンドライン引数を取得または設定します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.App.OnStartup(System.Windows.StartupEventArgs)">
+            <summary>
+            OnStartup イベントを発生させます。
+            </summary>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="M:PhotoViewer.App.OnExit(System.Windows.ExitEventArgs)">
+            <summary>
+            Exit イベントを発生させます。
+            </summary>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="M:PhotoViewer.App.App_DispatcherUnhandledException(System.Object,System.Windows.Threading.DispatcherUnhandledExceptionEventArgs)">
+            <summary>
+            メインスレッドで発生した未処理例外を捕捉します。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="M:PhotoViewer.App.CurrentDomain_UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            サブスレッドで発生した未処理例外を捕捉します。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントのデータ。</param>
+        </member>
+        <member name="M:PhotoViewer.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.View.Behavior.EventToCommandActionBehavior">
+            <summary>
+            イベントのパラメーターをコマンドパラメーターへ設定してコマンドを実行します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.View.Behavior.EventToCommandActionBehavior.CommandProperty">
+            <summary>
+            コマンドを保持します。
+            </summary>
+        </member>
+        <member name="F:PhotoViewer.View.Behavior.EventToCommandActionBehavior.CommandParameterProperty">
+            <summary>
+            コマンドパラメーターを保持します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.View.Behavior.EventToCommandActionBehavior.Command">
+            <summary>
+            コマンドを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.View.Behavior.EventToCommandActionBehavior.CommandParameter">
+            <summary>
+            コマンドパラメーターを取得または設定します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Behavior.EventToCommandActionBehavior.Invoke(System.Object)">
+            <summary>
+            アクションを起動します。
+            </summary>
+            <param name="parameter">
+            アクションへのパラメーター。
+            アクションがパラメーターを要求しない場合、パラメーターを null 参照に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.View.Behavior.TriggerActionBehaviorBase`2">
+            <summary>
+            メッセージの通知内容をメッセージボックスで表示します。
+            </summary>
+            <typeparam name="TAssociatedObject">このアクションをアタッチできる型。</typeparam>
+            <typeparam name="TEventArgs">このアクションへのパラメーターの型。</typeparam>
+        </member>
+        <member name="M:PhotoViewer.View.Behavior.TriggerActionBehaviorBase`2.Invoke(System.Object)">
+            <summary>
+            アクションを起動します。
+            </summary>
+            <param name="parameter">
+            アクションへのパラメーター。
+            アクションがパラメーターを要求しない場合、パラメーターを null 参照に設定できます。
+            </param>
+        </member>
+        <member name="M:PhotoViewer.View.Behavior.TriggerActionBehaviorBase`2.Invoke(`1)">
+            <summary>
+            アクションを起動します。
+            </summary>
+            <param name="parameter">
+            アクションへのパラメーター。
+            アクションがパラメーターを要求しない場合、パラメーターを null 参照に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.View.Behavior.OpenFileDialogActionBehavior">
+            <summary>
+            ファイルを開くダイアログボックスを表示します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Behavior.OpenFileDialogActionBehavior.Invoke(PhotoViewer.Mvvm.OpenFileDialogNotificationEventArgs)">
+            <summary>
+            アクションを起動します。
+            </summary>
+            <param name="parameter">
+            アクションへのパラメーター。
+            アクションがパラメーターを要求しない場合、パラメーターを null 参照に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.View.Behavior.MessageBoxActionBehavior">
+            <summary>
+            メッセージの通知内容をメッセージボックスで表示します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Behavior.MessageBoxActionBehavior.Invoke(PhotoViewer.Mvvm.MessageBoxNotificationEventArgs)">
+            <summary>
+            アクションを起動します。
+            </summary>
+            <param name="parameter">
+            アクションへのパラメーター。
+            アクションがパラメーターを要求しない場合、パラメーターを null 参照に設定できます。
+            </param>
+        </member>
+        <member name="T:PhotoViewer.View.Converter.BitmapMetadataConverter">
+            <summary>
+            メタデータを変換します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ソースによって生成された値。</param>
+            <param name="targetType">バインディング ターゲット プロパティの型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ターゲットによって生成された値。</param>
+            <param name="targetType">変換後の型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="T:PhotoViewer.View.Converter.BitmapMetadataOrientationInvertConverter">
+            <summary>
+            画像の反転情報をXスケールへ変換します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataOrientationInvertConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ソースによって生成された値。</param>
+            <param name="targetType">バインディング ターゲット プロパティの型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataOrientationInvertConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ターゲットによって生成された値。</param>
+            <param name="targetType">変換後の型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="T:PhotoViewer.View.Converter.BitmapMetadataOrientationConverter">
+            <summary>
+            画像の回転情報を時計回りの角度へ変換します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataOrientationConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ソースによって生成された値。</param>
+            <param name="targetType">バインディング ターゲット プロパティの型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.BitmapMetadataOrientationConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            値を変換します。
+            </summary>
+            <param name="value">バインディング ターゲットによって生成された値。</param>
+            <param name="targetType">変換後の型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
+        </member>
+        <member name="T:PhotoViewer.View.Converter.MultiValueConverter">
+            <summary>
+            複数のコマンドパラメータを単一へ変換します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.MultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ソース値をバインディング ターゲットの値に変換します。
+            データ バインディング エンジンでは、ソース バインディングからの値をバインディング ターゲットに伝達するときに、このメソッドを呼び出します。
+            </summary>
+            <param name="values">
+            System.Windows.Data.MultiBinding 内のソース バインディングが生成する値の配列。
+            値の System.Windows.DependencyProperty.UnsetValueは、変換に提供する値がソース バインディングにないことを示します。
+            </param>
+            <param name="targetType">バインディング ターゲット プロパティの型。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>
+            変換された値。メソッドから null が返された場合、有効な null 値が使用されます。戻り値の System.Windows.DependencyProperty.System.Windows.DependencyProperty.UnsetValue
+            は、コンバーターで値を生成しなかったこと、および System.Windows.Data.BindingBase.FallbackValue が使用できる場合にバインディングでそれを使用し、使用できない場合は既定値を使用することを示します。
+            戻り値の System.Windows.Data.Binding.System.Windows.Data.Binding.DoNothing は、バインディングで値を転送しないこと、あるいは
+            System.Windows.Data.BindingBase.FallbackValue または既定値を使用しないことを示します。
+            </returns>
+        </member>
+        <member name="M:PhotoViewer.View.Converter.MultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            バインディング ターゲットの値をバインディング ソースの値に変換します。
+            </summary>
+            <param name="value">バインディング ターゲットによって生成される値。</param>
+            <param name="targetTypes">変換対象の型の配列。 配列の長さは、メソッドの戻り値として推奨されている値の数と型を示します。</param>
+            <param name="parameter">使用するコンバーター パラメーター。</param>
+            <param name="culture">コンバーターで使用するカルチャ。</param>
+            <returns>ターゲット値からソース値に変換された値の配列。</returns>
+        </member>
+        <member name="T:PhotoViewer.View.MainWindow">
+            <summary>
+            MainWindow.xaml の相互作用ロジック
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.MainWindow.#ctor">
+            <summary>
+            PhotoViewer.View.MainWindow クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PhotoViewer.View.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PhotoViewer.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.Culture">
+            <summary>
+              すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.CAPTION_ABOUT">
+            <summary>
+              About Photo Viewer に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.CAPTION_ERROR">
+            <summary>
+              Error に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.FILE_FILTER">
+            <summary>
+              JPEG (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|TIFF (*.tif;*.tiff)|*.tif;*.tiff|PNG (*.png)|*.png|All Files (*.*)|*.* に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.FILE_VERSION">
+            <summary>
+              Version に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_COPY">
+            <summary>
+              Ctrl+C に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_DELETE">
+            <summary>
+              Delete に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_EXIT">
+            <summary>
+              Alt+F4 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_HELP_TOPICS">
+            <summary>
+              F1 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_NEXT">
+            <summary>
+              Right に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_OPEN">
+            <summary>
+              Ctrl+O に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.GESTURE_PREVIOUS">
+            <summary>
+              Left に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_ABOUT">
+            <summary>
+              _About Photo Viewer... に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_COPY">
+            <summary>
+              _Copy に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_DELETE">
+            <summary>
+              _Delete に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_EDIT">
+            <summary>
+              _Edit に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_EXIT">
+            <summary>
+              E_xit に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_FILE">
+            <summary>
+              _File に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_GITHUB">
+            <summary>
+              _GitHub に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_HELP">
+            <summary>
+              _Help に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_HELP_TOPICS">
+            <summary>
+              _Help Topics に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_NEXT">
+            <summary>
+              _Next に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_OPEN">
+            <summary>
+              _Open... に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_OPEN_FILE_WITH">
+            <summary>
+              Open wit_h に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.MENU_PREVIOUS">
+            <summary>
+              _Previous に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_COPY">
+            <summary>
+              Copy (Ctrl+C) に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_DELETE">
+            <summary>
+              Delete (Delete) に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_NEXT">
+            <summary>
+              Next (Right) に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_OPEN">
+            <summary>
+              Open (Ctrl+O) に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_OPEN_FILE_WITH">
+            <summary>
+              Open with に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.TOOLTIP_PREVIOUS">
+            <summary>
+              Previous (Left) に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.URL_GITHUB">
+            <summary>
+              https://github.com/msl-ltd/PhotoViewer に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.Properties.Resources.URL_HELP_TOPICS">
+            <summary>
+              https://github.com/msl-ltd/PhotoViewer/wiki に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
