@@ -60,7 +60,7 @@ namespace PhotoViewer.Model
         public string FileName
         {
             get => _fileName;
-            private set => SetProperty(ref _fileName, value, nameof(FileName));
+            private set => SetProperty(ref _fileName, value);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace PhotoViewer.Model
         public BitmapFrame Source
         {
             get => _source;
-            private set => SetProperty(ref _source, value, nameof(Source));
+            private set => SetProperty(ref _source, value);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace PhotoViewer.Model
         public BitmapMetadata Metadata
         {
             get => _metadata;
-            private set => SetProperty(ref _metadata, value, nameof(Metadata));
+            private set => SetProperty(ref _metadata, value);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace PhotoViewer.Model
         public ushort? Orientation
         {
             get => _orientation;
-            private set => SetProperty(ref _orientation, value, nameof(Orientation));
+            private set => SetProperty(ref _orientation, value);
         }
 
         /// <summary>

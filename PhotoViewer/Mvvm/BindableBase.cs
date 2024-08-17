@@ -6,6 +6,7 @@
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace PhotoViewer.Mvvm
 {
@@ -38,7 +39,7 @@ namespace PhotoViewer.Mvvm
         /// <param name="field">変更するプロパティ。</param>
         /// <param name="value">変更する値。</param>
         /// <param name="propertyName">変更するプロパティ名。</param>
-        protected void SetProperty<T>(ref T field, T value, string propertyName)
+        protected void SetProperty<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             if (!EqualityComparer<T>.Default.Equals(field, value))
             {
