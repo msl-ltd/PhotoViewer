@@ -5,6 +5,7 @@
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
 using PhotoViewer.Mvvm;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PhotoViewer.ViewModel.Command
@@ -28,12 +29,12 @@ namespace PhotoViewer.ViewModel.Command
 
             if (parameter != null)
             {
-                string[] args = null;
+                List<string> args = null;
                 MainViewModel mainViewModel = null;
 
                 if (parameter.Length > 0)
                 {
-                    args = parameter[0] as string[];
+                    args = parameter[0] as List<string>;
                 }
 
                 if (parameter.Length > 1)
@@ -61,7 +62,7 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                string[] args = parameter[0] as string[];
+                List<string> args = parameter[0] as List<string>;
                 MainViewModel mainViewModel = parameter[1] as MainViewModel;
 
                 mainViewModel.Load(args.FirstOrDefault());
