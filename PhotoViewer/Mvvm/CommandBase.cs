@@ -39,7 +39,7 @@ namespace PhotoViewer.Mvvm
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
         bool ICommand.CanExecute(object parameter)
         {
-            bool can = false;
+            var can = false;
 
             if (!_isExecuting)
             {

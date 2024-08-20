@@ -25,7 +25,7 @@ namespace PhotoViewer.ViewModel.Command
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
         protected override bool CanExecute(object[] parameter)
         {
-            bool can = false;
+            var can = false;
 
             if (parameter != null)
             {
@@ -62,8 +62,8 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                DragEventArgs dragEventArgs = parameter[0] as DragEventArgs;
-                MainViewModel mainViewModel = parameter[1] as MainViewModel;
+                var dragEventArgs = parameter[0] as DragEventArgs;
+                var mainViewModel = parameter[1] as MainViewModel;
 
                 if (dragEventArgs.Data.GetData(DataFormats.FileDrop) is string[] files)
                 {

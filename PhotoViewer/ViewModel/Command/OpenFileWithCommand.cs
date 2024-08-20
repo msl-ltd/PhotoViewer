@@ -24,7 +24,7 @@ namespace PhotoViewer.ViewModel.Command
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
         protected override bool CanExecute(MainViewModel parameter)
         {
-            bool can = false;
+            var can = false;
 
             if (parameter != null)
             {

@@ -25,7 +25,7 @@ namespace PhotoViewer.ViewModel.Command
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
         protected override bool CanExecute(object[] parameter)
         {
-            bool can = false;
+            var can = false;
 
             if (parameter != null)
             {
@@ -62,8 +62,8 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                List<string> args = parameter[0] as List<string>;
-                MainViewModel mainViewModel = parameter[1] as MainViewModel;
+                var args = parameter[0] as List<string>;
+                var mainViewModel = parameter[1] as MainViewModel;
 
                 mainViewModel.Load(args.FirstOrDefault());
             }

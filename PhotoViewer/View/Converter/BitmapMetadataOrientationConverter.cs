@@ -25,7 +25,7 @@ namespace PhotoViewer.View.Converter
         /// <returns>変換された値。 メソッドが null を返す場合は、正しい null 値が使用されます。</returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int angle = 0;
+            var angle = 0;
 
             if (value != null)
             {
