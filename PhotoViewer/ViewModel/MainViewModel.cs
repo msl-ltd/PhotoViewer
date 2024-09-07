@@ -45,6 +45,41 @@ namespace PhotoViewer.ViewModel
         }
 
         /// <summary>
+        /// ファイルを開くダイアログボックス表示リクエストを取得または設定します。
+        /// </summary>
+        public InteractionRequest<OpenFileDialogNotificationEventArgs> OpenFileDialogRequest
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// メッセージボックス表示リクエストを取得または設定します。
+        /// </summary>
+        public InteractionRequest<MessageBoxNotificationEventArgs> MessageBoxRequest
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// タイトルを取得します。
+        /// </summary>
+        public string Title
+        {
+            get
+            {
+                var productName = FileVersionInfo.ProductName;
+                if (!string.IsNullOrEmpty(FileName))
+                {
+                    productName = $"{productName} - {FileName}";
+                }
+
+                return productName;
+            }
+        }
+
+        /// <summary>
         /// バージョン情報を取得します。
         /// </summary>
         public FileVersionInfo FileVersionInfo => _mainModel.FileVersionInfo;
@@ -83,41 +118,6 @@ namespace PhotoViewer.ViewModel
         /// 他のファイルが存在するかを取得します。
         /// </summary>
         public bool IsExistOther => _mainModel.IsExistOther;
-
-        /// <summary>
-        /// タイトルを取得します。
-        /// </summary>
-        public string Title
-        {
-            get
-            {
-                var productName = FileVersionInfo.ProductName;
-                if (!string.IsNullOrEmpty(FileName))
-                {
-                    productName = $"{productName} - {FileName}";
-                }
-
-                return productName;
-            }
-        }
-
-        /// <summary>
-        /// ファイルを開くダイアログボックス表示リクエストを取得または設定します。
-        /// </summary>
-        public InteractionRequest<OpenFileDialogNotificationEventArgs> OpenFileDialogRequest
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
-        /// メッセージボックス表示リクエストを取得または設定します。
-        /// </summary>
-        public InteractionRequest<MessageBoxNotificationEventArgs> MessageBoxRequest
-        {
-            get;
-            private set;
-        }
 
         /// <summary>
         /// ファイルを読み込みます。

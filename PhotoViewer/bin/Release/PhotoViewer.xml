@@ -543,6 +543,21 @@
             PhotoViewer.ViewModel.MainViewModel クラスの新しいインスタンスを解放します。
             </summary>
         </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.OpenFileDialogRequest">
+            <summary>
+            ファイルを開くダイアログボックス表示リクエストを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.MessageBoxRequest">
+            <summary>
+            メッセージボックス表示リクエストを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PhotoViewer.ViewModel.MainViewModel.Title">
+            <summary>
+            タイトルを取得します。
+            </summary>
+        </member>
         <member name="P:PhotoViewer.ViewModel.MainViewModel.FileVersionInfo">
             <summary>
             バージョン情報を取得します。
@@ -581,21 +596,6 @@
         <member name="P:PhotoViewer.ViewModel.MainViewModel.IsExistOther">
             <summary>
             他のファイルが存在するかを取得します。
-            </summary>
-        </member>
-        <member name="P:PhotoViewer.ViewModel.MainViewModel.Title">
-            <summary>
-            タイトルを取得します。
-            </summary>
-        </member>
-        <member name="P:PhotoViewer.ViewModel.MainViewModel.OpenFileDialogRequest">
-            <summary>
-            ファイルを開くダイアログボックス表示リクエストを取得または設定します。
-            </summary>
-        </member>
-        <member name="P:PhotoViewer.ViewModel.MainViewModel.MessageBoxRequest">
-            <summary>
-            メッセージボックス表示リクエストを取得または設定します。
             </summary>
         </member>
         <member name="M:PhotoViewer.ViewModel.MainViewModel.Load(System.String)">
