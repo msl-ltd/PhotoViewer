@@ -4,8 +4,6 @@
 // </copyright>
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Threading;
 

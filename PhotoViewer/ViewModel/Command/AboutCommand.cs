@@ -6,7 +6,6 @@
 //-----------------------------------------------------------------------
 using PhotoViewer.Mvvm;
 using PhotoViewer.Properties;
-using System;
 using System.Windows;
 
 namespace PhotoViewer.ViewModel.Command

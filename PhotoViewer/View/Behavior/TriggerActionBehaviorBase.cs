@@ -4,7 +4,6 @@
 // </copyright>
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
-using System;
 using System.Windows;
 using Microsoft.Xaml.Behaviors;
 

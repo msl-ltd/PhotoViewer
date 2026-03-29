@@ -4,7 +4,6 @@
 // </copyright>
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 

@@ -5,7 +5,6 @@
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
 using PhotoViewer.Mvvm;
-using System.Linq;
 using System.Windows;
 
 namespace PhotoViewer.ViewModel.Command
