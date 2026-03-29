@@ -9,6 +9,7 @@
     <ApplicationIcon>Image.ico</ApplicationIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Copyright>(C) 2018 MSL Ltd.</Copyright>
+    <Version>2.0.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

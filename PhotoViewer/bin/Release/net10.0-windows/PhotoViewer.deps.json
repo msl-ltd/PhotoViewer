@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "PhotoViewer/1.0.0": {
+      "PhotoViewer/2.0.0.0": {
         "dependencies": {
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.142"
         },
@@ -30,7 +30,7 @@
     }
   },
   "libraries": {
-    "PhotoViewer/1.0.0": {
+    "PhotoViewer/2.0.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
