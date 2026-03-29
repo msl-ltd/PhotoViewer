@@ -6,14 +6,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Image.ico</ApplicationIcon>
+    <ApplicationIcon>Asset\Image.ico</ApplicationIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Copyright>(C) 2018 MSL Ltd.</Copyright>
     <Version>2.0.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Image.ico" />
+    <Content Include="Asset\Image.ico" />
   </ItemGroup>
 
   <ItemGroup>
