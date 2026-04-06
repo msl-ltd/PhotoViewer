@@ -48,7 +48,11 @@ namespace PhotoViewer.ViewModel.Command
         {
             if (parameter != null)
             {
-                using (var process = Process.Start(parameter.FileName))
+                using (var process = Process.Start(new ProcessStartInfo
+                {
+                    UseShellExecute = true,
+                    FileName = parameter.FileName,
+                }))
                 {
                 }
             }
