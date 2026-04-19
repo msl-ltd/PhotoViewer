@@ -17,7 +17,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// 通知内容を取得または設定します。
         /// </summary>
-        public TContent Content
+        public required TContent Content
         {
             get;
             set;
@@ -26,7 +26,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// 結果通知コールバックを取得または設定します。
         /// </summary>
-        public Action<TCallbackArgs> Callback
+        public Action<TCallbackArgs>? Callback
         {
             get;
             set;

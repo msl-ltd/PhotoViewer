@@ -15,7 +15,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// ファイルの種類を決定するフィルター文字列を取得または設定します。
         /// </summary>
-        public string Filter
+        public required string Filter
         {
             get;
             set;

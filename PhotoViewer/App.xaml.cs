@@ -20,8 +20,7 @@ namespace PhotoViewer
         public List<string> Args
         {
             get;
-            private set;
-        }
+        } = [];
 
         /// <summary>
         /// OnStartup イベントを発生させます。
@@ -36,7 +35,7 @@ namespace PhotoViewer
             // コマンドライン引数を設定します。
             if (e != null)
             {
-                Args = new List<string>(e.Args);
+                Args.AddRange(e.Args);
             }
 
             base.OnStartup(e);

@@ -16,7 +16,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// 表示するテキストを取得または設定します。
         /// </summary>
-        public string Text
+        public required string Text
         {
             get;
             set;
@@ -25,7 +25,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// 表示するタイトル バーのキャプションを取得または設定します。
         /// </summary>
-        public string Caption
+        public required string Caption
         {
             get;
             set;

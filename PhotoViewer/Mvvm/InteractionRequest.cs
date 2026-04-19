@@ -16,7 +16,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// 通知したときに発生します。
         /// </summary>
-        public event EventHandler<T> Notified;
+        public event EventHandler<T>? Notified;
 
         /// <summary>
         /// 通知イベントを発生します。

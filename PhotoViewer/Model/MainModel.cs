@@ -22,21 +22,6 @@ namespace PhotoViewer.Model
     internal class MainModel : BindableBase
     {
         /// <summary>
-        /// ファイル名を保持します。
-        /// </summary>
-        private string _fileName;
-
-        /// <summary>
-        /// 画像を保持します。
-        /// </summary>
-        private BitmapFrame _source;
-
-        /// <summary>
-        /// メタデータを保持します。
-        /// </summary>
-        private BitmapMetadata _metadata;
-
-        /// <summary>
         /// 回転情報を保持します。
         /// </summary>
         private ushort? _orientation;
@@ -56,8 +41,8 @@ namespace PhotoViewer.Model
         /// </summary>
         public string FileName
         {
-            get => _fileName;
-            private set => SetProperty(ref _fileName, value);
+            get;
+            private set => SetProperty(ref field, value);
         }
 
         /// <summary>
@@ -65,8 +50,8 @@ namespace PhotoViewer.Model
         /// </summary>
         public BitmapFrame Source
         {
-            get => _source;
-            private set => SetProperty(ref _source, value);
+            get;
+            private set => SetProperty(ref field, value);
         }
 
         /// <summary>
@@ -74,8 +59,8 @@ namespace PhotoViewer.Model
         /// </summary>
         public BitmapMetadata Metadata
         {
-            get => _metadata;
-            private set => SetProperty(ref _metadata, value);
+            get;
+            private set => SetProperty(ref field, value);
         }
 
         /// <summary>

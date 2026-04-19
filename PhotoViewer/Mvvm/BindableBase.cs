@@ -17,7 +17,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// プロパティ値が変更するときに発生します。
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// プロパティ変更イベントを発生します。

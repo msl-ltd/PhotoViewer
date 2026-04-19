@@ -58,21 +58,6 @@
             メインモデルを定義します。
             </summary>
         </member>
-        <member name="F:PhotoViewer.Model.MainModel._fileName">
-            <summary>
-            ファイル名を保持します。
-            </summary>
-        </member>
-        <member name="F:PhotoViewer.Model.MainModel._source">
-            <summary>
-            画像を保持します。
-            </summary>
-        </member>
-        <member name="F:PhotoViewer.Model.MainModel._metadata">
-            <summary>
-            メタデータを保持します。
-            </summary>
-        </member>
         <member name="F:PhotoViewer.Model.MainModel._orientation">
             <summary>
             回転情報を保持します。
