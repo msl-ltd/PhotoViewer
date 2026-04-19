@@ -28,8 +28,8 @@ namespace PhotoViewer.ViewModel.Command
 
             if (parameter != null)
             {
-                DragEventArgs dragEventArgs = null;
-                MainViewModel mainViewModel = null;
+                DragEventArgs? dragEventArgs = null;
+                MainViewModel? mainViewModel = null;
 
                 if (parameter.Length > 0)
                 {

@@ -27,8 +27,8 @@ namespace PhotoViewer.ViewModel.Command
 
             if (parameter != null)
             {
-                List<string> args = null;
-                MainViewModel mainViewModel = null;
+                List<string>? args = null;
+                MainViewModel? mainViewModel = null;
 
                 if (parameter.Length > 0)
                 {

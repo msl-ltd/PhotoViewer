@@ -88,7 +88,7 @@ namespace PhotoViewer.Model
         /// <param name="fileName">ファイル名。</param>
         public void Load(string fileName)
         {
-            BitmapFrame bitmapFrame = null;
+            BitmapFrame? bitmapFrame = null;
 
             try
             {
