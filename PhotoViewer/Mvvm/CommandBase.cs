@@ -22,7 +22,7 @@ namespace PhotoViewer.Mvvm
         /// <summary>
         /// コマンドを実行するかどうかに影響するような変更があった場合に発生します。
         /// </summary>
-        public event EventHandler CanExecuteChanged
+        public event EventHandler? CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
