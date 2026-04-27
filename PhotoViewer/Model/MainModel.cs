@@ -22,11 +22,6 @@ namespace PhotoViewer.Model
     internal class MainModel : BindableBase
     {
         /// <summary>
-        /// 回転情報を保持します。
-        /// </summary>
-        private ushort? _orientation;
-
-        /// <summary>
         /// バージョン情報を取得します。
         /// </summary>
         public FileVersionInfo FileVersionInfo => FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location);
@@ -68,8 +63,8 @@ namespace PhotoViewer.Model
         /// </summary>
         public ushort? Orientation
         {
-            get => _orientation;
-            private set => SetProperty(ref _orientation, value);
+            get;
+            private set => SetProperty(ref field, value);
         }
 
         /// <summary>

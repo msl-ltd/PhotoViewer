@@ -58,11 +58,6 @@
             メインモデルを定義します。
             </summary>
         </member>
-        <member name="F:PhotoViewer.Model.MainModel._orientation">
-            <summary>
-            回転情報を保持します。
-            </summary>
-        </member>
         <member name="P:PhotoViewer.Model.MainModel.FileVersionInfo">
             <summary>
             バージョン情報を取得します。
