@@ -23,12 +23,9 @@ namespace PhotoViewer.Mvvm
         /// プロパティ変更イベントを発生します。
         /// </summary>
         /// <param name="propertyName">変更したプロパティ名。</param>
-        protected void RaisePropertyChanged(string propertyName)
+        protected void RaisePropertyChanged(string? propertyName)
         {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -38,7 +35,7 @@ namespace PhotoViewer.Mvvm
         /// <param name="field">変更するプロパティ。</param>
         /// <param name="value">変更する値。</param>
         /// <param name="propertyName">変更するプロパティ名。</param>
-        protected void SetProperty<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+        protected void SetProperty<T>(ref T field, T value, [CallerMemberName] string? propertyName = null)
         {
             if (!EqualityComparer<T>.Default.Equals(field, value))
             {

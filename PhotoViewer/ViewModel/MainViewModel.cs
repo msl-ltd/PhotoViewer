@@ -150,7 +150,7 @@ namespace PhotoViewer.ViewModel
         /// </summary>
         /// <param name="sender">イベントのソース。</param>
         /// <param name="e">イベントのデータ。</param>
-        private void MainModel_PropertyChanged(object? sender, PropertyChangedEventArgs e) => RaisePropertyChanged(e?.PropertyName);
+        private void MainModel_PropertyChanged(object? sender, PropertyChangedEventArgs e) => RaisePropertyChanged(e.PropertyName);
 
         /// <summary>
         /// メインビューモデルのプロパティの変更を通知します。
@@ -160,7 +160,7 @@ namespace PhotoViewer.ViewModel
         private void MainViewModel_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
             // メインビューモデルのプロパティの変更を通知します。
-            switch (e?.PropertyName)
+            switch (e.PropertyName)
             {
                 case nameof(FileName):
                     RaisePropertyChanged(nameof(Title));
