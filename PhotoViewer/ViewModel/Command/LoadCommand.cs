@@ -18,10 +18,9 @@ namespace PhotoViewer.ViewModel.Command
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
-        protected override bool CanExecute(object[] parameter)
+        protected override bool CanExecute(object[]? parameter)
         {
             var can = false;
 
@@ -54,9 +53,8 @@ namespace PhotoViewer.ViewModel.Command
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
-        protected override void Execute(object[] parameter)
+        protected override void Execute(object[]? parameter)
         {
             if (parameter != null)
             {

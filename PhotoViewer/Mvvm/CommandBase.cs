@@ -33,16 +33,15 @@ namespace PhotoViewer.Mvvm
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
-        bool ICommand.CanExecute(object parameter)
+        bool ICommand.CanExecute(object? parameter)
         {
             var can = false;
 
             if (!_isExecuting)
             {
-                if (CanExecute((T)parameter))
+                if (CanExecute((T?)parameter))
                 {
                     can = true;
                 }
@@ -56,15 +55,14 @@ namespace PhotoViewer.Mvvm
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
-        void ICommand.Execute(object parameter)
+        void ICommand.Execute(object? parameter)
         {
             try
             {
                 _isExecuting = true;
 
-                Execute((T)parameter);
+                Execute((T?)parameter);
             }
             finally
             {
@@ -77,18 +75,16 @@ namespace PhotoViewer.Mvvm
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
         /// <returns>このコマンドを実行できる場合は、true。それ以外の場合は、false。</returns>
-        protected abstract bool CanExecute(T parameter);
+        protected abstract bool CanExecute(T? parameter);
 
         /// <summary>
         /// コマンドが起動される際に呼び出すメソッドを定義します。
         /// </summary>
         /// <param name="parameter">
         /// コマンドにより使用されるデータです。
-        /// コマンドにデータを渡す必要がない場合は、このオブジェクトを null に設定できます。
         /// </param>
-        protected abstract void Execute(T parameter);
+        protected abstract void Execute(T? parameter);
     }
 }
