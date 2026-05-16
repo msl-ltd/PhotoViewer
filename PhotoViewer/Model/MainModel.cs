@@ -23,12 +23,18 @@ namespace PhotoViewer.Model
         /// <summary>
         /// バージョン情報を取得します。
         /// </summary>
-        public FileVersionInfo FileVersionInfo => FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
+        public FileVersionInfo FileVersionInfo
+        {
+            get;
+        } = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
 
         /// <summary>
         /// 読み込み可能なファイルのパターンを取得します。
         /// </summary>
-        public string[] ReadableFiles => [.. Resources.FILE_FILTER.Split('|').Where((arg1, arg2) => (arg2 % 2) == 1).SelectMany(arg => arg.Split(';')).Where(arg => !"*.*".Equals(arg))];
+        public string[] ReadableFiles
+        {
+            get;
+        } = [.. Resources.FILE_FILTER.Split('|').Where((arg1, arg2) => (arg2 % 2) == 1).SelectMany(arg => arg.Split(';')).Where(arg => !"*.*".Equals(arg))];
 
         /// <summary>
         /// ファイル名を取得または設定します。
