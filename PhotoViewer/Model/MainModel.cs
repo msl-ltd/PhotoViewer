@@ -29,7 +29,7 @@ namespace PhotoViewer.Model
         /// <summary>
         /// 読み込み可能なファイルのパターンを取得します。
         /// </summary>
-        public string[] ReadableFiles => Resources.FILE_FILTER.Split('|').Where((arg1, arg2) => (arg2 % 2) == 1).SelectMany(arg => arg.Split(';')).Where(arg => !"*.*".Equals(arg)).ToArray();
+        public string[] ReadableFiles => [.. Resources.FILE_FILTER.Split('|').Where((arg1, arg2) => (arg2 % 2) == 1).SelectMany(arg => arg.Split(';')).Where(arg => !"*.*".Equals(arg))];
 
         /// <summary>
         /// ファイル名を取得または設定します。
@@ -168,7 +168,7 @@ namespace PhotoViewer.Model
                 files.Sort();
             }
 
-            return files.ToArray();
+            return [.. files];
         }
     }
 }
