@@ -24,7 +24,7 @@ namespace PhotoViewer.Model
         /// <summary>
         /// バージョン情報を取得します。
         /// </summary>
-        public FileVersionInfo FileVersionInfo => FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location);
+        public FileVersionInfo FileVersionInfo => FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
 
         /// <summary>
         /// 読み込み可能なファイルのパターンを取得します。

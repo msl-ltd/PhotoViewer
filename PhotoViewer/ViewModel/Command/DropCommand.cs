@@ -62,9 +62,9 @@ namespace PhotoViewer.ViewModel.Command
                 var dragEventArgs = parameter[0] as DragEventArgs;
                 var mainViewModel = parameter[1] as MainViewModel;
 
-                if (dragEventArgs.Data.GetData(DataFormats.FileDrop) is string[] files)
+                if (dragEventArgs?.Data.GetData(DataFormats.FileDrop) is string[] files)
                 {
-                    mainViewModel.Load(files.FirstOrDefault());
+                    mainViewModel?.Load(files.FirstOrDefault());
                 }
             }
         }

@@ -61,7 +61,7 @@ namespace PhotoViewer.ViewModel.Command
                 var args = parameter[0] as List<string>;
                 var mainViewModel = parameter[1] as MainViewModel;
 
-                mainViewModel.Load(args.FirstOrDefault());
+                mainViewModel?.Load(args.FirstOrDefault());
             }
         }
     }
