@@ -135,10 +135,10 @@ namespace PhotoViewer.Model
         {
             if (IsExist)
             {
-                Clipboard.SetFileDropList(new StringCollection
-                {
+                Clipboard.SetFileDropList(
+                [
                     FileName
-                });
+                ]);
             }
         }
 
