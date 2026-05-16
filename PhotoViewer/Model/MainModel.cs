@@ -34,7 +34,7 @@ namespace PhotoViewer.Model
         /// <summary>
         /// ファイル名を取得または設定します。
         /// </summary>
-        public string FileName
+        public string? FileName
         {
             get;
             private set => SetProperty(ref field, value);
@@ -43,7 +43,7 @@ namespace PhotoViewer.Model
         /// <summary>
         /// 画像を取得または設定します。
         /// </summary>
-        public BitmapFrame Source
+        public BitmapFrame? Source
         {
             get;
             private set => SetProperty(ref field, value);
@@ -52,7 +52,7 @@ namespace PhotoViewer.Model
         /// <summary>
         ///  メタデータを取得または設定します。
         /// </summary>
-        public BitmapMetadata Metadata
+        public BitmapMetadata? Metadata
         {
             get;
             private set => SetProperty(ref field, value);
