@@ -7,7 +7,6 @@
 using Microsoft.VisualBasic.FileIO;
 using PhotoViewer.Mvvm;
 using PhotoViewer.Properties;
-using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
