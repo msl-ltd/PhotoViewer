@@ -20,19 +20,15 @@ namespace PhotoViewer.ViewModel
         /// <summary>
         /// モデルを保持します。
         /// </summary>
-        private readonly MainModel _mainModel;
+        private readonly MainModel _mainModel = new MainModel();
 
         /// <summary>
         /// PhotoViewer.ViewModel.MainViewModel クラスの新しいインスタンスを初期化します。
         /// </summary>
         public MainViewModel()
         {
-            _mainModel = new MainModel();
             _mainModel.PropertyChanged += MainModel_PropertyChanged;
             _mainModel.PropertyChanged += MainViewModel_PropertyChanged;
-
-            OpenFileDialogRequest = new InteractionRequest<OpenFileDialogNotificationEventArgs>();
-            MessageBoxRequest = new InteractionRequest<MessageBoxNotificationEventArgs>();
         }
 
         /// <summary>
@@ -50,8 +46,7 @@ namespace PhotoViewer.ViewModel
         public InteractionRequest<OpenFileDialogNotificationEventArgs> OpenFileDialogRequest
         {
             get;
-            private set;
-        }
+        } = new InteractionRequest<OpenFileDialogNotificationEventArgs>();
 
         /// <summary>
         /// メッセージボックス表示リクエストを取得または設定します。
@@ -59,8 +54,7 @@ namespace PhotoViewer.ViewModel
         public InteractionRequest<MessageBoxNotificationEventArgs> MessageBoxRequest
         {
             get;
-            private set;
-        }
+        } = new InteractionRequest<MessageBoxNotificationEventArgs>();
 
         /// <summary>
         /// タイトルを取得します。
