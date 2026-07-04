@@ -30,7 +30,7 @@ namespace PhotoViewer.View.Behavior
         /// </summary>
         public ICommand Command
         {
-            get => GetValue(CommandProperty) as ICommand;
+            get => (ICommand)GetValue(CommandProperty);
             set => SetValue(CommandProperty, value);
         }
 

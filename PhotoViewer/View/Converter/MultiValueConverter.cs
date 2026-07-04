@@ -31,7 +31,7 @@ namespace PhotoViewer.View.Converter
         /// 戻り値の System.Windows.Data.Binding.System.Windows.Data.Binding.DoNothing は、バインディングで値を転送しないこと、あるいは
         /// System.Windows.Data.BindingBase.FallbackValue または既定値を使用しないことを示します。
         /// </returns>
-        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture) => values?.Clone();
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture) => values.Clone();
 
         /// <summary>
         /// バインディング ターゲットの値をバインディング ソースの値に変換します。
@@ -41,6 +41,6 @@ namespace PhotoViewer.View.Converter
         /// <param name="parameter">使用するコンバーター パラメーター。</param>
         /// <param name="culture">コンバーターで使用するカルチャ。</param>
         /// <returns>ターゲット値からソース値に変換された値の配列。</returns>
-        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) => (value as object[])?.Clone() as object[];
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) => (object[])((object[])value).Clone();
     }
 }

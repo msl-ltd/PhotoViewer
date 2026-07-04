@@ -59,7 +59,7 @@ namespace PhotoViewer.ViewModel
         /// <summary>
         /// タイトルを取得します。
         /// </summary>
-        public string Title
+        public string? Title
         {
             get
             {
@@ -86,17 +86,17 @@ namespace PhotoViewer.ViewModel
         /// <summary>
         /// ファイル名を取得します。
         /// </summary>
-        public string FileName => _mainModel.FileName;
+        public string? FileName => _mainModel.FileName;
 
         /// <summary>
         /// 画像を取得します。
         /// </summary>
-        public BitmapFrame Source => _mainModel.Source;
+        public BitmapFrame? Source => _mainModel.Source;
 
         /// <summary>
         ///  画像のメタデータを取得します。
         /// </summary>
-        public BitmapMetadata Metadata => _mainModel.Metadata;
+        public BitmapMetadata? Metadata => _mainModel.Metadata;
 
         /// <summary>
         /// 回転情報を取得します。

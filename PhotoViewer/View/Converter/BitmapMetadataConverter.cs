@@ -5,6 +5,7 @@
 // <author>MIYATA Tomoyuki</author>
 //-----------------------------------------------------------------------
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 
@@ -99,7 +100,7 @@ namespace PhotoViewer.View.Converter
                 }
             }
 
-            return System.Convert.ChangeType(result, targetType);
+            return System.Convert.ChangeType(result, targetType) ?? DependencyProperty.UnsetValue;
         }
 
         /// <summary>
